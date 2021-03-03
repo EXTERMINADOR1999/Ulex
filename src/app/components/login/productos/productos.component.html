@@ -1,0 +1,12 @@
+<div class="contenedor" *ngFor="let categoria of productosMostrar">
+  <h4 class="titulo">{{categoria.nombre}}</h4>
+  <hr>
+  <div class="tarjeta" *ngFor="let productos of categoria.productos">
+    <img [src]="productos.imagen" alt="">
+    <div class="sub-contenedor">
+      <p>{{productos.nombre}}</p>
+      <h4>{{productos.precio | currency}}</h4>
+      <a class="boton">Comprar</a>
+    </div>
+  </div>
+</div>
